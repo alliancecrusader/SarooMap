@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map Example</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjWYzODcTBDuAKHRw2cme2jQG28lIFFss"></script>
+    <script>
+        function initMap() {
+            const addressLocation = { lat: -34.9249, lng: 138.6001 }; // Coordinates for 100 Pirie St, Adelaide
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: addressLocation
+            });
+            new google.maps.Marker({
+                position: addressLocation,
+                map: map
+            });
+        }
+    </script>
+</head>
+<body onload="initMap()">
+    <h1>Google Map for 100 Pirie St, Adelaide</h1>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+</body>
+</html>
