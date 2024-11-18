@@ -11,17 +11,7 @@
             const map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15,
                 center: addressLocation,
-                mapTypeId: 'satellite', // Set map type to satellite
-                styles: [
-                    {
-                        "elementType": "labels",
-                        "stylers": [
-                            {
-                                "visibility": "off" // Hide labels
-                            }
-                        ]
-                    }
-                ]
+                mapTypeId: 'satellite', 
             });
             new google.maps.Marker({
                 position: addressLocation,
